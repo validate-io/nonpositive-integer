@@ -1,4 +1,4 @@
-nonpositive-integer
+Nonpositive Integer
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,36 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-nonpositive-integer' );
+var isValid = require( 'validate.io-nonpositive-integer' );
 ```
 
-#### foo( value )
+#### isValid( value )
 
-What does this function do?
+Validates if a `value` is a nonpositive integer.
 
+``` javascript
+var value = -5;
+
+var bool = isValid( value );
+// returns true
+```
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-nonpositive-integer' );
+var isValid = require( 'validate.io-nonpositive-integer' );
+
+console.log( isValid( -5 ) );
+// returns true
+
+console.log( isValid( 0 ) );
+// returns true
+
+console.log( isValid( -Math.PI ) );
+// returns false
+
+console.log( isValid( 5 ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
